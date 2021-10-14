@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+  flex-direction: column;
+}
+
+.wrapper {
+  height: 70vh;
+  width: 20vw;
+  background-color: rgb(255, 255, 255);
+  border: solid 1px;
+}
+
+@media screen and (max-width: 992px) {
+  .wrapper {
+    width: 96vw;
+  }
+}
+
+.pane {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  flex-grow: 8.5;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(241, 241, 241);
+  font-weight: bold;
+  padding-bottom: 3%;
+}
+
+.top-bar {
+  display: flex;
+  background-color: rgb(241, 241, 241);
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.action-bar-text {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.action-bar-actions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.action-bar-button {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: aqua;
+}
+
+.footer {
+  flex-grow: 0.5;
+}
+
+.msg {
+  display: flex;
+}
+
+.messages,
+blockquote {
+  padding: 0.5em;
+}
+
+.msg {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+blockquote {
+  border-radius: 0.35em;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  max-width: 60%;
+}
+
+.msg--them blockquote::after,
+.msg--me blockquote::before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+}
+
+.msg--them blockquote {
+  background-color: #0a090d;
+  color: white;
+}
+
+.msg--them blockquote::after {
+  border: 0.5em solid #0a090d;
+  border-color: #0a090d transparent transparent #0a090d;
+  top: 0.5em;
+  right: -1em;
+}
+
+.msg--me blockquote {
+  background-color: #e8e7e7;
+  margin-left: 1em;
+}
+
+.msg--me blockquote::before {
+  border: 0.5em solid #e8e7e7;
+  border-color: #e8e7e7 #e8e7e7 transparent transparent;
+  top: 0.5em;
+  left: -1em;
+}
+
+.messages {
+  flex: 1;
+  overflow: auto;
+}
+
+.msg--them {
+  justify-content: flex-end;
+}
+
+.msg--system blockquote {
+  background-color: #5c5c5c;
+  color: white;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 10%;
+}
+
+.msg--system {
+  justify-content: center;
+}
+
+.msg--them blockquote {
+  order: -1;
+  margin-right: 1em;
+}
+
+.msg-send {
+  display: flex;
+  justify-content: center;
+}
+
+msg-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.chat-input {
+  width: 95%;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(243, 243, 243);
+  padding: 5px;
+}
+
+.msg-date {
+  font-size: 10px;
+}

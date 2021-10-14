@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.wrapper {
+  height: 70vh;
+  width: 20vw;
+}
+
+.pane {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.conversation {
+  flex-grow: 8.5;
+  border: solid 1px;
+}
+
+.header {
+  flex-grow: 1;
+  border: solid 1px;
+}
+
+.footer {
+  flex-grow: 0.5;
+  border: solid 1px;
+}
